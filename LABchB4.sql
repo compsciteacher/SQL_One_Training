@@ -1,38 +1,38 @@
 --order 1
 
-Select *
-from TEAMS
-Order by startdate DESC --because date starts with oldest
+SELECT *
+  FROM TEAMS
+  ORDER BY startdate DESC --because date starts with oldest
 ;
 
 --order 2
-Select firstname,lastname,salary,bonus,gender
-from members
-order by gender,salary
+SELECT firstname,lastname,salary,bonus,gender
+  FROM members
+  ORDER BY gender,salary
 ;
 
 --order 3
-Select firstname,lastname,salary,bonus,gender
-from members
-order by gender,salary DESC
+SELECT firstname,lastname,salary,bonus,gender
+  FROM members
+  ORDER BY gender,salary DESC
 ;
 
 --order 4
 select lastname,firstname,coalesce(bonus,0) AS TotalComp
-  from members
-  order by TotalComp DESC --can use TheBonus aliaas because that is where the value change happens
+  FROM members
+  ORDER BY TotalComp DESC --can use TheBonus aliaas because that is where the value change happens
 
 ;
 
 --order 5
-select lastname,firstname,coalesce(bonus,0) AS TotalComp
-  from members
-  order by TotalComp ASC --can use TheBonus aliaas because that is where the value change happens
+SELECT lastname,firstname,coalesce(bonus,0) AS TotalComp
+  FROM members
+  ORDER BY TotalComp ASC --can use TheBonus aliaas because that is where the value change happens
 
 ;
 
 
 --order 6
-select saledate,qty,unitprice
-from sales
-order by saledate desc,qty,unitprice
+SELECT saledate,qty,unitprice
+  FROM sales
+  ORDER BY saledate desc,qty,unitprice
